@@ -14,9 +14,6 @@ import subprocess
 from urllib.parse import urlparse
 from io import BytesIO
 from PIL import Image, ImageDraw
-from azure.cognitiveservices.vision.face import FaceClient
-from msrest.authentication import CognitiveServicesCredentials
-from azure.cognitiveservices.vision.face.models import TrainingStatusType, Person, SnapshotObjectType, OperationStatusType
 
 import numpy as np
 import cv2
@@ -31,20 +28,9 @@ flip_video = False
 key_input = ''
 terminate_program = False
 spies = []
-spy_images_processor = SpyImageProcessor()
 
 # video capture from open cv2
 capture = cv2.VideoCapture(0)
-
-# Set the FACE_SUBSCRIPTION_KEY environment variable with your key as the value.
-# This key will serve all examples in this document.
-KEY = os.environ['FACE_SUBSCRIPTION_KEY']
-
-# Set the FACE_ENDPOINT environment variable with the endpoint from your Face service in Azure.
-# This endpoint will be used in all examples in this quickstart.
-ENDPOINT = os.environ['FACE_ENDPOINT']
-
-# print(KEY, ENDPOINT)
 
 fps = capture.get(cv2.CAP_PROP_FPS)
 print("fps: ", fps)
@@ -65,11 +51,13 @@ else:
     print("Successfully created the directory %s " % path)
 
 
+spy_images_processor = SpyImageProcessor(path)
+
 def main():
     spy_face_counter = 0
     while(True):
         #  read if any input
-        input = select.select([sys.stdin], [], [], 0.5)[0]
+        input = select.select([sys.stdin], [], [], 0.8)[0]
         if input:
             line = sys.stdin.readline().rstrip()
             if (line == 'q'):
@@ -94,10 +82,10 @@ def main():
                     img_path = path + '/spy_img_' + \
                         str(spy_face_counter) + '.jpg'
                     # print(path)
+                    # cv2.rectangle(frame, (x, y),
+                    #               (x+w, y+h), (255, 255, 0), 2)
                     cv2.imwrite(img_path, frame)
                     spy_images_processor.add_image_path(img_path)
-                    cv2.rectangle(frame, (x, y),
-                                  (x+w, y+h), (255, 255, 0), 2)
                     # subprocess.call(
                     #     'echo \'tell application "Finder" to sleep\' | osascript', shell=True)
                     break
@@ -111,6 +99,7 @@ def main():
     #     print(image)
 
     # When everything done, release the capture
+    print("spy face counter: ", spy_face_counter)
     capture.release()
     cv2.destroyAllWindows()
 
