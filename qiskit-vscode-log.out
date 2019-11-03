@@ -1,0 +1,341 @@
+verbose - Object: Activating qiskit-vscode extension...
+verbose - Object: ✨ Activating qiskit-vscode extension... ✨
+verbose - Object: Checking for Python dependencies...
+verbose - Object: Package: python Version: 3.7.0
+verbose - Object: Package: pip Version: 19.0.3
+verbose - Object: Check for required python packages...
+debug - PackageManager: Checking package qiskit 0.6.0 installation
+debug - PackageManager: Checking package qiskit-aqua 0.4.0 installation
+debug - PackageManager: Checking package qiskit-chemistry 0.4.2 installation
+debug - PackageManager: Checking package IBMQuantumExperience 2.0.4 installation
+verbose - unknown: Qiskit VSCode Extension dependencies found! 👌 python v 3.7.0
+👌 pip v 19.0.3
+
+verbose - Object: qiskit-vscode extension successfully loaded!
+verbose - Object: 🚀 qiskit-vscode extension loaded! 🚀
+verbose - PackageManager: Starting non-mandatory update process for qiskit ...
+verbose - PackageManager: Starting non-mandatory update process for qiskit-aqua ...
+verbose - PackageManager: Starting non-mandatory update process for qiskit-chemistry ...
+verbose - PackageManager: Starting non-mandatory update process for IBMQuantumExperience ...
+verbose - PackageManager: Starting update process for qiskit-chemistry ...
+verbose - PackageManager: Starting update process for qiskit-aqua ...
+verbose - PackageManager: Starting update process for qiskit ...
+verbose - PackageManager: IBMQuantumExperience is already installed
+info - Object: Go to update IBMQuantumExperience
+verbose - Object: 👌 IBMQuantumExperience is already installed
+verbose - PackageManager: Clicked on OK!
+verbose - PackageManager: Clicked on OK!
+verbose - PackageManager: Clicked on OK!
+verbose - PipExecutor: Package qiskit-aqua updated: Collecting qiskit-aqua
+  Downloading https://files.pythonhosted.org/packages/47/2b/632c195974804d17dca01554caa013dd0c3023f4e4e6b91213c3381ce514/qiskit_aqua-0.6.1-py3-none-any.whl (979kB)
+Requirement already satisfied, skipping upgrade: scipy>=1.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-aqua) (1.1.0)
+Collecting pyscf; sys_platform != "win32" (from qiskit-aqua)
+  Downloading https://files.pythonhosted.org/packages/0d/47/f99fc782774980ba42ed563bf2a237b143f1d13ed44966068e60382cf3aa/pyscf-1.6.4-cp37-cp37m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (10.9MB)
+Requirement already satisfied, skipping upgrade: psutil>=5 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-aqua) (5.4.7)
+Requirement already satisfied, skipping upgrade: scikit-learn>=0.20.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-aqua) (0.20.0)
+Requirement already satisfied, skipping upgrade: networkx>=2.2 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-aqua) (2.2)
+Collecting qiskit-ignis<0.3.0,>=0.2.0 (from qiskit-aqua)
+  Downloading https://files.pythonhosted.org/packages/78/f2/f4f89c65d2c13f473092f7e800519836611ddeeaab8d4591a70555b26a37/qiskit_ignis-0.2.0-py3-none-any.whl (100kB)
+Requirement already satisfied, skipping upgrade: numpy>=1.13 in /usr/local/lib/python3.7/site-packages (from qiskit-aqua) (1.16.2)
+Collecting docplex (from qiskit-aqua)
+  Downloading https://files.pythonhosted.org/packages/fb/b9/37d68e68bbb46625a283c6b900989934538d5fb2ae6e7748288641fbac30/docplex-2.10.155.tar.gz (529kB)
+Requirement already satisfied, skipping upgrade: h5py in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-aqua) (2.8.0)
+Requirement already satisfied, skipping upgrade: cvxopt in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-aqua) (1.2.1)
+Requirement already satisfied, skipping upgrade: jsonschema>=2.6 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-aqua) (2.6.0)
+Collecting fastdtw (from qiskit-aqua)
+  Downloading https://files.pythonhosted.org/packages/99/e5/8425c47c3919e3fe3f771ee41c4f97c3a66104d33e07127dea81e32b7987/fastdtw-0.3.4-cp37-cp37m-macosx_10_14_x86_64.whl (103kB)
+Collecting qiskit-terra>=0.9.0 (from qiskit-aqua)
+  Downloading https://files.pythonhosted.org/packages/12/f3/4f9ebaa716a257ac6c000379721781ab673ccf65073ecba2020efb5658d0/qiskit_terra-0.10.0-cp37-cp37m-macosx_10_6_intel.whl (1.2MB)
+Collecting dlx (from qiskit-aqua)
+  Downloading https://files.pythonhosted.org/packages/54/c0/b8fb5bb727e983b6f5251433ef941b48f38c65bb0bd6ec509e9185bcd406/dlx-1.0.4.tar.gz
+Requirement already satisfied, skipping upgrade: sympy>=1.3 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-aqua) (1.3)
+Requirement already satisfied, skipping upgrade: setuptools>=40.1.0 in /usr/local/lib/python3.7/site-packages (from qiskit-aqua) (40.8.0)
+Collecting quandl (from qiskit-aqua)
+  Downloading https://files.pythonhosted.org/packages/12/64/6314547cb01fa75697ddba6d6d43a9f1d023c1730ffc6abf3db7a0c89222/Quandl-3.4.8-py2.py3-none-any.whl
+Requirement already satisfied, skipping upgrade: decorator>=4.3.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from networkx>=2.2->qiskit-aqua) (4.3.0)
+Requirement already satisfied, skipping upgrade: requests in /Users/akash/anaconda3/lib/python3.7/site-packages (from docplex->qiskit-aqua) (2.19.1)
+Requirement already satisfied, skipping upgrade: six in /Users/akash/anaconda3/lib/python3.7/site-packages (from docplex->qiskit-aqua) (1.11.0)
+Collecting docloud>=1.0.369 (from docplex->qiskit-aqua)
+  Downloading https://files.pythonhosted.org/packages/89/1c/fcb7ea86ae5cb7137a22f00bcaa785de2d102bd4a2b16383ec4a877a835b/docloud-1.0.375.tar.gz
+Collecting marshmallow-polyfield<6,>=5.7 (from qiskit-terra>=0.9.0->qiskit-aqua)
+  Downloading https://files.pythonhosted.org/packages/d7/6c/416e7e529d03362bb57bb4be16a0bb1ada6325b12adf3e31fec4c10ef1b1/marshmallow-polyfield-5.7.tar.gz
+Requirement already satisfied, skipping upgrade: ply>=3.10 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-terra>=0.9.0->qiskit-aqua) (3.11)
+Collecting marshmallow<4,>=3 (from qiskit-terra>=0.9.0->qiskit-aqua)
+  Downloading https://files.pythonhosted.org/packages/78/8c/aa99cd72e69ce14c754a4df752a57faffbd698b14a6fda598a3950273e99/marshmallow-3.2.1-py2.py3-none-any.whl (45kB)
+Requirement already satisfied, skipping upgrade: pandas>=0.14 in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua) (0.23.4)
+Requirement already satisfied, skipping upgrade: pyOpenSSL in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua) (18.0.0)
+Collecting ndg-httpsclient (from quandl->qiskit-aqua)
+  Downloading https://files.pythonhosted.org/packages/fb/67/c2f508c00ed2a6911541494504b7cac16fe0b0473912568df65fd1801132/ndg_httpsclient-0.5.1-py3-none-any.whl
+Collecting inflection>=0.3.1 (from quandl->qiskit-aqua)
+  Downloading https://files.pythonhosted.org/packages/d5/35/a6eb45b4e2356fe688b21570864d4aa0d0a880ce387defe9c589112077f8/inflection-0.3.1.tar.gz
+Requirement already satisfied, skipping upgrade: more-itertools<=5.0.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua) (4.3.0)
+Requirement already satisfied, skipping upgrade: pyasn1 in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua) (0.4.4)
+Requirement already satisfied, skipping upgrade: python-dateutil in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua) (2.7.3)
+Requirement already satisfied, skipping upgrade: certifi>=2017.4.17 in /Users/akash/anaconda3/lib/python3.7/site-packages (from requests->docplex->qiskit-aqua) (2018.8.24)
+Requirement already satisfied, skipping upgrade: urllib3<1.24,>=1.21.1 in /Users/akash/anaconda3/lib/python3.7/site-packages (from requests->docplex->qiskit-aqua) (1.23)
+Requirement already satisfied, skipping upgrade: chardet<3.1.0,>=3.0.2 in /Users/akash/anaconda3/lib/python3.7/site-packages (from requests->docplex->qiskit-aqua) (3.0.4)
+Requirement already satisfied, skipping upgrade: idna<2.8,>=2.5 in /Users/akash/anaconda3/lib/python3.7/site-packages (from requests->docplex->qiskit-aqua) (2.7)
+Requirement already satisfied, skipping upgrade: pytz>=2011k in /Users/akash/anaconda3/lib/python3.7/site-packages (from pandas>=0.14->quandl->qiskit-aqua) (2018.5)
+Requirement already satisfied, skipping upgrade: cryptography>=2.2.1 in /Users/akash/anaconda3/lib/python3.7/site-packages (from pyOpenSSL->quandl->qiskit-aqua) (2.3.1)
+Requirement already satisfied, skipping upgrade: asn1crypto>=0.21.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from cryptography>=2.2.1->pyOpenSSL->quandl->qiskit-aqua) (0.24.0)
+Requirement already satisfied, skipping upgrade: cffi!=1.11.3,>=1.7 in /Users/akash/anaconda3/lib/python3.7/site-packages (from cryptography>=2.2.1->pyOpenSSL->quandl->qiskit-aqua) (1.11.5)
+Requirement already satisfied, skipping upgrade: pycparser in /Users/akash/anaconda3/lib/python3.7/site-packages (from cffi!=1.11.3,>=1.7->cryptography>=2.2.1->pyOpenSSL->quandl->qiskit-aqua) (2.19)
+Installing collected packages: pyscf, marshmallow, marshmallow-polyfield, qiskit-terra, qiskit-ignis, docloud, docplex, fastdtw, dlx, ndg-httpsclient, inflection, quandl, qiskit-aqua
+  Found existing installation: marshmallow 2.17.0
+    Can't uninstall 'marshmallow'. No files were found to uninstall.
+  Found existing installation: marshmallow-polyfield 3.2
+    Can't uninstall 'marshmallow-polyfield'. No files were found to uninstall.
+  Running setup.py install for marshmallow-polyfield: started
+    Running setup.py install for marshmallow-polyfield: finished with status 'done'
+  Found existing installation: qiskit-terra 0.7.1
+    Can't uninstall 'qiskit-terra'. No files were found to uninstall.
+  Found existing installation: qiskit-ignis 0.1.0
+    Uninstalling qiskit-ignis-0.1.0:
+      Successfully uninstalled qiskit-ignis-0.1.0
+  Running setup.py install for docloud: started
+    Running setup.py install for docloud: finished with status 'done'
+  Running setup.py install for docplex: started
+    Running setup.py install for docplex: finished with status 'done'
+  Running setup.py install for dlx: started
+    Running setup.py install for dlx: finished with status 'done'
+  Running setup.py install for inflection: started
+    Running setup.py install for inflection: finished with status 'done'
+  Found existing installation: qiskit-aqua 0.4.1
+    Uninstalling qiskit-aqua-0.4.1:
+      Successfully uninstalled qiskit-aqua-0.4.1
+Successfully installed dlx-1.0.4 docloud-1.0.375 docplex-2.10.155 fastdtw-0.3.4 inflection-0.3.1 marshmallow-3.2.1 marshmallow-polyfield-5.7 ndg-httpsclient-0.5.1 pyscf-1.6.4 qiskit-aqua-0.6.1 qiskit-ignis-0.2.0 qiskit-terra-0.10.0 quandl-3.4.8
+qiskit 0.8.0 has requirement qiskit-ignis==0.1.0, but you'll have qiskit-ignis 0.2.0 which is incompatible.
+qiskit 0.8.0 has requirement qiskit_terra==0.7.1, but you'll have qiskit-terra 0.10.0 which is incompatible.
+qiskit-aqua-chemistry 0.4.0 has requirement qiskit-terra<0.8,>=0.7.0, but you'll have qiskit-terra 0.10.0 which is incompatible.
+
+info - PackageManager: Package [object Object] updated
+info - Object: Go to update qiskit-aqua
+verbose - PipExecutor: Package qiskit-chemistry updated: Collecting qiskit-chemistry
+  Downloading https://files.pythonhosted.org/packages/41/35/6b10aa3ea2fbe1b64cb0c3b2eaecb23cff044b574b151e8adc9ab9fbfe9a/qiskit_chemistry-0.5.0-py3-none-any.whl (516kB)
+Requirement already satisfied, skipping upgrade: h5py in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-chemistry) (2.8.0)
+Requirement already satisfied, skipping upgrade: numpy>=1.13 in /usr/local/lib/python3.7/site-packages (from qiskit-chemistry) (1.16.2)
+Requirement already satisfied, skipping upgrade: psutil>=5 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-chemistry) (5.4.7)
+Collecting pyscf; sys_platform != "win32" (from qiskit-chemistry)
+  Downloading https://files.pythonhosted.org/packages/0d/47/f99fc782774980ba42ed563bf2a237b143f1d13ed44966068e60382cf3aa/pyscf-1.6.4-cp37-cp37m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (10.9MB)
+Collecting qiskit-aqua>=0.5.0 (from qiskit-chemistry)
+  Downloading https://files.pythonhosted.org/packages/47/2b/632c195974804d17dca01554caa013dd0c3023f4e4e6b91213c3381ce514/qiskit_aqua-0.6.1-py3-none-any.whl (979kB)
+Requirement already satisfied, skipping upgrade: networkx>=2.2 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-chemistry) (2.2)
+Requirement already satisfied, skipping upgrade: setuptools>=40.1.0 in /usr/local/lib/python3.7/site-packages (from qiskit-chemistry) (40.8.0)
+Requirement already satisfied, skipping upgrade: jsonschema<2.7,>=2.6 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-chemistry) (2.6.0)
+Requirement already satisfied, skipping upgrade: six in /Users/akash/anaconda3/lib/python3.7/site-packages (from h5py->qiskit-chemistry) (1.11.0)
+Requirement already satisfied, skipping upgrade: scipy in /Users/akash/anaconda3/lib/python3.7/site-packages (from pyscf; sys_platform != "win32"->qiskit-chemistry) (1.1.0)
+Collecting dlx (from qiskit-aqua>=0.5.0->qiskit-chemistry)
+  Downloading https://files.pythonhosted.org/packages/54/c0/b8fb5bb727e983b6f5251433ef941b48f38c65bb0bd6ec509e9185bcd406/dlx-1.0.4.tar.gz
+Requirement already satisfied, skipping upgrade: scikit-learn>=0.20.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-aqua>=0.5.0->qiskit-chemistry) (0.20.0)
+Collecting qiskit-terra>=0.9.0 (from qiskit-aqua>=0.5.0->qiskit-chemistry)
+  Downloading https://files.pythonhosted.org/packages/12/f3/4f9ebaa716a257ac6c000379721781ab673ccf65073ecba2020efb5658d0/qiskit_terra-0.10.0-cp37-cp37m-macosx_10_6_intel.whl (1.2MB)
+Collecting fastdtw (from qiskit-aqua>=0.5.0->qiskit-chemistry)
+  Downloading https://files.pythonhosted.org/packages/99/e5/8425c47c3919e3fe3f771ee41c4f97c3a66104d33e07127dea81e32b7987/fastdtw-0.3.4-cp37-cp37m-macosx_10_14_x86_64.whl (103kB)
+Requirement already satisfied, skipping upgrade: cvxopt in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-aqua>=0.5.0->qiskit-chemistry) (1.2.1)
+Requirement already satisfied, skipping upgrade: sympy>=1.3 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-aqua>=0.5.0->qiskit-chemistry) (1.3)
+Collecting quandl (from qiskit-aqua>=0.5.0->qiskit-chemistry)
+  Downloading https://files.pythonhosted.org/packages/12/64/6314547cb01fa75697ddba6d6d43a9f1d023c1730ffc6abf3db7a0c89222/Quandl-3.4.8-py2.py3-none-any.whl
+Collecting docplex (from qiskit-aqua>=0.5.0->qiskit-chemistry)
+  Downloading https://files.pythonhosted.org/packages/fb/b9/37d68e68bbb46625a283c6b900989934538d5fb2ae6e7748288641fbac30/docplex-2.10.155.tar.gz (529kB)
+Collecting qiskit-ignis<0.3.0,>=0.2.0 (from qiskit-aqua>=0.5.0->qiskit-chemistry)
+  Downloading https://files.pythonhosted.org/packages/78/f2/f4f89c65d2c13f473092f7e800519836611ddeeaab8d4591a70555b26a37/qiskit_ignis-0.2.0-py3-none-any.whl (100kB)
+Requirement already satisfied, skipping upgrade: decorator>=4.3.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from networkx>=2.2->qiskit-chemistry) (4.3.0)
+Collecting marshmallow-polyfield<6,>=5.7 (from qiskit-terra>=0.9.0->qiskit-aqua>=0.5.0->qiskit-chemistry)
+  Downloading https://files.pythonhosted.org/packages/d7/6c/416e7e529d03362bb57bb4be16a0bb1ada6325b12adf3e31fec4c10ef1b1/marshmallow-polyfield-5.7.tar.gz
+Collecting marshmallow<4,>=3 (from qiskit-terra>=0.9.0->qiskit-aqua>=0.5.0->qiskit-chemistry)
+  Downloading https://files.pythonhosted.org/packages/78/8c/aa99cd72e69ce14c754a4df752a57faffbd698b14a6fda598a3950273e99/marshmallow-3.2.1-py2.py3-none-any.whl (45kB)
+Requirement already satisfied, skipping upgrade: ply>=3.10 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-terra>=0.9.0->qiskit-aqua>=0.5.0->qiskit-chemistry) (3.11)
+Requirement already satisfied, skipping upgrade: pyOpenSSL in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (18.0.0)
+Requirement already satisfied, skipping upgrade: more-itertools<=5.0.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (4.3.0)
+Requirement already satisfied, skipping upgrade: python-dateutil in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (2.7.3)
+Collecting inflection>=0.3.1 (from quandl->qiskit-aqua>=0.5.0->qiskit-chemistry)
+  Downloading https://files.pythonhosted.org/packages/d5/35/a6eb45b4e2356fe688b21570864d4aa0d0a880ce387defe9c589112077f8/inflection-0.3.1.tar.gz
+Requirement already satisfied, skipping upgrade: pyasn1 in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (0.4.4)
+Requirement already satisfied, skipping upgrade: pandas>=0.14 in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (0.23.4)
+Requirement already satisfied, skipping upgrade: requests>=2.7.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (2.19.1)
+Collecting ndg-httpsclient (from quandl->qiskit-aqua>=0.5.0->qiskit-chemistry)
+  Downloading https://files.pythonhosted.org/packages/fb/67/c2f508c00ed2a6911541494504b7cac16fe0b0473912568df65fd1801132/ndg_httpsclient-0.5.1-py3-none-any.whl
+Collecting docloud>=1.0.369 (from docplex->qiskit-aqua>=0.5.0->qiskit-chemistry)
+  Downloading https://files.pythonhosted.org/packages/89/1c/fcb7ea86ae5cb7137a22f00bcaa785de2d102bd4a2b16383ec4a877a835b/docloud-1.0.375.tar.gz
+Requirement already satisfied, skipping upgrade: cryptography>=2.2.1 in /Users/akash/anaconda3/lib/python3.7/site-packages (from pyOpenSSL->quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (2.3.1)
+Requirement already satisfied, skipping upgrade: pytz>=2011k in /Users/akash/anaconda3/lib/python3.7/site-packages (from pandas>=0.14->quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (2018.5)
+Requirement already satisfied, skipping upgrade: idna<2.8,>=2.5 in /Users/akash/anaconda3/lib/python3.7/site-packages (from requests>=2.7.0->quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (2.7)
+Requirement already satisfied, skipping upgrade: urllib3<1.24,>=1.21.1 in /Users/akash/anaconda3/lib/python3.7/site-packages (from requests>=2.7.0->quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (1.23)
+Requirement already satisfied, skipping upgrade: certifi>=2017.4.17 in /Users/akash/anaconda3/lib/python3.7/site-packages (from requests>=2.7.0->quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (2018.8.24)
+Requirement already satisfied, skipping upgrade: chardet<3.1.0,>=3.0.2 in /Users/akash/anaconda3/lib/python3.7/site-packages (from requests>=2.7.0->quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (3.0.4)
+Requirement already satisfied, skipping upgrade: asn1crypto>=0.21.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from cryptography>=2.2.1->pyOpenSSL->quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (0.24.0)
+Requirement already satisfied, skipping upgrade: cffi!=1.11.3,>=1.7 in /Users/akash/anaconda3/lib/python3.7/site-packages (from cryptography>=2.2.1->pyOpenSSL->quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (1.11.5)
+Requirement already satisfied, skipping upgrade: pycparser in /Users/akash/anaconda3/lib/python3.7/site-packages (from cffi!=1.11.3,>=1.7->cryptography>=2.2.1->pyOpenSSL->quandl->qiskit-aqua>=0.5.0->qiskit-chemistry) (2.19)
+Installing collected packages: pyscf, dlx, marshmallow, marshmallow-polyfield, qiskit-terra, fastdtw, inflection, ndg-httpsclient, quandl, docloud, docplex, qiskit-ignis, qiskit-aqua, qiskit-chemistry
+  Running setup.py install for dlx: started
+    Running setup.py install for dlx: finished with status 'done'
+  Found existing installation: marshmallow 2.17.0
+    Can't uninstall 'marshmallow'. No files were found to uninstall.
+  Found existing installation: marshmallow-polyfield 3.2
+    Can't uninstall 'marshmallow-polyfield'. No files were found to uninstall.
+  Running setup.py install for marshmallow-polyfield: started
+    Running setup.py install for marshmallow-polyfield: finished with status 'done'
+  Found existing installation: qiskit-terra 0.7.1
+    Can't uninstall 'qiskit-terra'. No files were found to uninstall.
+  Running setup.py install for inflection: started
+    Running setup.py install for inflection: finished with status 'done'
+  Running setup.py install for docloud: started
+    Running setup.py install for docloud: finished with status 'done'
+  Running setup.py install for docplex: started
+    Running setup.py install for docplex: finished with status 'done'
+  Found existing installation: qiskit-ignis 0.1.0
+    Can't uninstall 'qiskit-ignis'. No files were found to uninstall.
+  Found existing installation: qiskit-aqua 0.4.1
+    Can't uninstall 'qiskit-aqua'. No files were found to uninstall.
+  Found existing installation: qiskit-chemistry 0.4.2
+    Uninstalling qiskit-chemistry-0.4.2:
+      Successfully uninstalled qiskit-chemistry-0.4.2
+Successfully installed dlx-1.0.4 docloud-1.0.375 docplex-2.10.155 fastdtw-0.3.4 inflection-0.3.1 marshmallow-3.2.1 marshmallow-polyfield-5.7 ndg-httpsclient-0.5.1 pyscf-1.6.4 qiskit-aqua-0.6.1 qiskit-chemistry-0.5.0 qiskit-ignis-0.2.0 qiskit-terra-0.10.0 quandl-3.4.8
+Error checking for conflicts.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/pip/_vendor/pkg_resources/__init__.py", line 2897, in _dep_map
+    return self.__dep_map
+  File "/usr/local/lib/python3.7/site-packages/pip/_vendor/pkg_resources/__init__.py", line 2691, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/pip/_vendor/pkg_resources/__init__.py", line 2888, in _parsed_pkg_info
+    return self._pkg_info
+  File "/usr/local/lib/python3.7/site-packages/pip/_vendor/pkg_resources/__init__.py", line 2691, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/pip/_internal/commands/install.py", line 503, in _warn_about_conflicts
+    package_set, _dep_info = check_install_conflicts(to_install)
+  File "/usr/local/lib/python3.7/site-packages/pip/_internal/operations/check.py", line 108, in check_install_conflicts
+    package_set, _ = create_package_set_from_installed()
+  File "/usr/local/lib/python3.7/site-packages/pip/_internal/operations/check.py", line 47, in create_package_set_from_installed
+    package_set[name] = PackageDetails(dist.version, dist.requires())
+  File "/usr/local/lib/python3.7/site-packages/pip/_vendor/pkg_resources/__init__.py", line 2635, in requires
+    dm = self._dep_map
+  File "/usr/local/lib/python3.7/site-packages/pip/_vendor/pkg_resources/__init__.py", line 2899, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/usr/local/lib/python3.7/site-packages/pip/_vendor/pkg_resources/__init__.py", line 2908, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/usr/local/lib/python3.7/site-packages/pip/_vendor/pkg_resources/__init__.py", line 2890, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/usr/local/lib/python3.7/site-packages/pip/_vendor/pkg_resources/__init__.py", line 1410, in get_metadata
+    value = self._get(self._fn(self.egg_info, name))
+  File "/usr/local/lib/python3.7/site-packages/pip/_vendor/pkg_resources/__init__.py", line 1522, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/akash/anaconda3/lib/python3.7/site-packages/marshmallow-2.17.0.dist-info/METADATA'
+
+info - PackageManager: Package [object Object] updated
+info - Object: Go to update qiskit-chemistry
+verbose - PipExecutor: Package qiskit updated: Collecting qiskit
+  Downloading https://files.pythonhosted.org/packages/9e/2d/4c09bc1292a3be92f8c003b8491215ac9a0d81b014384e95a659a58ddf57/qiskit-0.13.0.tar.gz
+Collecting qiskit-terra==0.10.0 (from qiskit)
+  Downloading https://files.pythonhosted.org/packages/12/f3/4f9ebaa716a257ac6c000379721781ab673ccf65073ecba2020efb5658d0/qiskit_terra-0.10.0-cp37-cp37m-macosx_10_6_intel.whl (1.2MB)
+Collecting qiskit-aer==0.3.2 (from qiskit)
+  Downloading https://files.pythonhosted.org/packages/45/2f/596c2172d288f6c51527a102a41776dca59e22e8ae52256c234f901f65c5/qiskit_aer-0.3.2-cp37-cp37m-macosx_10_9_x86_64.whl (7.9MB)
+Collecting qiskit-ibmq-provider==0.3.3 (from qiskit)
+  Downloading https://files.pythonhosted.org/packages/cb/6a/ae5f648a565492dd6a39d2472e8940434f2df36c9c4422a39bc9535bfe01/qiskit-ibmq-provider-0.3.3.tar.gz (57kB)
+Collecting qiskit-ignis==0.2.0 (from qiskit)
+  Downloading https://files.pythonhosted.org/packages/78/f2/f4f89c65d2c13f473092f7e800519836611ddeeaab8d4591a70555b26a37/qiskit_ignis-0.2.0-py3-none-any.whl (100kB)
+Collecting qiskit-aqua==0.6.1 (from qiskit)
+  Downloading https://files.pythonhosted.org/packages/47/2b/632c195974804d17dca01554caa013dd0c3023f4e4e6b91213c3381ce514/qiskit_aqua-0.6.1-py3-none-any.whl (979kB)
+Requirement already satisfied, skipping upgrade: ply>=3.10 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-terra==0.10.0->qiskit) (3.11)
+Requirement already satisfied, skipping upgrade: psutil>=5 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-terra==0.10.0->qiskit) (5.4.7)
+Requirement already satisfied, skipping upgrade: networkx>=2.2 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-terra==0.10.0->qiskit) (2.2)
+Collecting marshmallow<4,>=3 (from qiskit-terra==0.10.0->qiskit)
+  Downloading https://files.pythonhosted.org/packages/78/8c/aa99cd72e69ce14c754a4df752a57faffbd698b14a6fda598a3950273e99/marshmallow-3.2.1-py2.py3-none-any.whl (45kB)
+Requirement already satisfied, skipping upgrade: numpy>=1.13 in /usr/local/lib/python3.7/site-packages (from qiskit-terra==0.10.0->qiskit) (1.16.2)
+Collecting marshmallow-polyfield<6,>=5.7 (from qiskit-terra==0.10.0->qiskit)
+  Downloading https://files.pythonhosted.org/packages/d7/6c/416e7e529d03362bb57bb4be16a0bb1ada6325b12adf3e31fec4c10ef1b1/marshmallow-polyfield-5.7.tar.gz
+Requirement already satisfied, skipping upgrade: scipy>=1.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-terra==0.10.0->qiskit) (1.1.0)
+Requirement already satisfied, skipping upgrade: jsonschema>=2.6 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-terra==0.10.0->qiskit) (2.6.0)
+Requirement already satisfied, skipping upgrade: sympy>=1.3 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-terra==0.10.0->qiskit) (1.3)
+Collecting nest-asyncio==1.0.0 (from qiskit-ibmq-provider==0.3.3->qiskit)
+  Downloading https://files.pythonhosted.org/packages/62/18/4c6a895c925e8822e72535d774861e9ca07089c4b938ed20002b1aaab66a/nest_asyncio-1.0.0-py3-none-any.whl
+Requirement already satisfied, skipping upgrade: requests>=2.19 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-ibmq-provider==0.3.3->qiskit) (2.19.1)
+Requirement already satisfied, skipping upgrade: requests-ntlm>=1.1.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-ibmq-provider==0.3.3->qiskit) (1.1.0)
+Collecting websockets<8,>=7 (from qiskit-ibmq-provider==0.3.3->qiskit)
+  Downloading https://files.pythonhosted.org/packages/47/d0/1f156ca4477e60a1e98de1b4afabd610d24cdaeafe196e5a204aa41863fa/websockets-7.0-cp37-cp37m-macosx_10_6_intel.whl (57kB)
+Requirement already satisfied, skipping upgrade: setuptools>=40.1.0 in /usr/local/lib/python3.7/site-packages (from qiskit-ignis==0.2.0->qiskit) (40.8.0)
+Collecting pyscf; sys_platform != "win32" (from qiskit-aqua==0.6.1->qiskit)
+  Downloading https://files.pythonhosted.org/packages/0d/47/f99fc782774980ba42ed563bf2a237b143f1d13ed44966068e60382cf3aa/pyscf-1.6.4-cp37-cp37m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (10.9MB)
+Collecting dlx (from qiskit-aqua==0.6.1->qiskit)
+  Downloading https://files.pythonhosted.org/packages/54/c0/b8fb5bb727e983b6f5251433ef941b48f38c65bb0bd6ec509e9185bcd406/dlx-1.0.4.tar.gz
+Requirement already satisfied, skipping upgrade: cvxopt in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-aqua==0.6.1->qiskit) (1.2.1)
+Requirement already satisfied, skipping upgrade: scikit-learn>=0.20.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-aqua==0.6.1->qiskit) (0.20.0)
+Collecting docplex (from qiskit-aqua==0.6.1->qiskit)
+  Downloading https://files.pythonhosted.org/packages/fb/b9/37d68e68bbb46625a283c6b900989934538d5fb2ae6e7748288641fbac30/docplex-2.10.155.tar.gz (529kB)
+Requirement already satisfied, skipping upgrade: h5py in /Users/akash/anaconda3/lib/python3.7/site-packages (from qiskit-aqua==0.6.1->qiskit) (2.8.0)
+Collecting fastdtw (from qiskit-aqua==0.6.1->qiskit)
+  Downloading https://files.pythonhosted.org/packages/99/e5/8425c47c3919e3fe3f771ee41c4f97c3a66104d33e07127dea81e32b7987/fastdtw-0.3.4-cp37-cp37m-macosx_10_14_x86_64.whl (103kB)
+Collecting quandl (from qiskit-aqua==0.6.1->qiskit)
+  Downloading https://files.pythonhosted.org/packages/12/64/6314547cb01fa75697ddba6d6d43a9f1d023c1730ffc6abf3db7a0c89222/Quandl-3.4.8-py2.py3-none-any.whl
+Requirement already satisfied, skipping upgrade: decorator>=4.3.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from networkx>=2.2->qiskit-terra==0.10.0->qiskit) (4.3.0)
+Requirement already satisfied, skipping upgrade: six in /Users/akash/anaconda3/lib/python3.7/site-packages (from marshmallow-polyfield<6,>=5.7->qiskit-terra==0.10.0->qiskit) (1.11.0)
+Requirement already satisfied, skipping upgrade: urllib3<1.24,>=1.21.1 in /Users/akash/anaconda3/lib/python3.7/site-packages (from requests>=2.19->qiskit-ibmq-provider==0.3.3->qiskit) (1.23)
+Requirement already satisfied, skipping upgrade: chardet<3.1.0,>=3.0.2 in /Users/akash/anaconda3/lib/python3.7/site-packages (from requests>=2.19->qiskit-ibmq-provider==0.3.3->qiskit) (3.0.4)
+Requirement already satisfied, skipping upgrade: idna<2.8,>=2.5 in /Users/akash/anaconda3/lib/python3.7/site-packages (from requests>=2.19->qiskit-ibmq-provider==0.3.3->qiskit) (2.7)
+Requirement already satisfied, skipping upgrade: certifi>=2017.4.17 in /Users/akash/anaconda3/lib/python3.7/site-packages (from requests>=2.19->qiskit-ibmq-provider==0.3.3->qiskit) (2018.8.24)
+Requirement already satisfied, skipping upgrade: ntlm-auth>=1.0.2 in /Users/akash/anaconda3/lib/python3.7/site-packages (from requests-ntlm>=1.1.0->qiskit-ibmq-provider==0.3.3->qiskit) (1.2.0)
+Requirement already satisfied, skipping upgrade: cryptography>=1.3 in /Users/akash/anaconda3/lib/python3.7/site-packages (from requests-ntlm>=1.1.0->qiskit-ibmq-provider==0.3.3->qiskit) (2.3.1)
+Collecting docloud>=1.0.369 (from docplex->qiskit-aqua==0.6.1->qiskit)
+  Downloading https://files.pythonhosted.org/packages/89/1c/fcb7ea86ae5cb7137a22f00bcaa785de2d102bd4a2b16383ec4a877a835b/docloud-1.0.375.tar.gz
+Requirement already satisfied, skipping upgrade: python-dateutil in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua==0.6.1->qiskit) (2.7.3)
+Requirement already satisfied, skipping upgrade: more-itertools<=5.0.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua==0.6.1->qiskit) (4.3.0)
+Requirement already satisfied, skipping upgrade: pyOpenSSL in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua==0.6.1->qiskit) (18.0.0)
+Requirement already satisfied, skipping upgrade: pyasn1 in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua==0.6.1->qiskit) (0.4.4)
+Requirement already satisfied, skipping upgrade: pandas>=0.14 in /Users/akash/anaconda3/lib/python3.7/site-packages (from quandl->qiskit-aqua==0.6.1->qiskit) (0.23.4)
+Collecting ndg-httpsclient (from quandl->qiskit-aqua==0.6.1->qiskit)
+  Downloading https://files.pythonhosted.org/packages/fb/67/c2f508c00ed2a6911541494504b7cac16fe0b0473912568df65fd1801132/ndg_httpsclient-0.5.1-py3-none-any.whl
+Collecting inflection>=0.3.1 (from quandl->qiskit-aqua==0.6.1->qiskit)
+  Downloading https://files.pythonhosted.org/packages/d5/35/a6eb45b4e2356fe688b21570864d4aa0d0a880ce387defe9c589112077f8/inflection-0.3.1.tar.gz
+Requirement already satisfied, skipping upgrade: asn1crypto>=0.21.0 in /Users/akash/anaconda3/lib/python3.7/site-packages (from cryptography>=1.3->requests-ntlm>=1.1.0->qiskit-ibmq-provider==0.3.3->qiskit) (0.24.0)
+Requirement already satisfied, skipping upgrade: cffi!=1.11.3,>=1.7 in /Users/akash/anaconda3/lib/python3.7/site-packages (from cryptography>=1.3->requests-ntlm>=1.1.0->qiskit-ibmq-provider==0.3.3->qiskit) (1.11.5)
+Requirement already satisfied, skipping upgrade: pytz>=2011k in /Users/akash/anaconda3/lib/python3.7/site-packages (from pandas>=0.14->quandl->qiskit-aqua==0.6.1->qiskit) (2018.5)
+Requirement already satisfied, skipping upgrade: pycparser in /Users/akash/anaconda3/lib/python3.7/site-packages (from cffi!=1.11.3,>=1.7->cryptography>=1.3->requests-ntlm>=1.1.0->qiskit-ibmq-provider==0.3.3->qiskit) (2.19)
+Installing collected packages: marshmallow, marshmallow-polyfield, qiskit-terra, qiskit-aer, nest-asyncio, websockets, qiskit-ibmq-provider, qiskit-ignis, pyscf, dlx, docloud, docplex, fastdtw, ndg-httpsclient, inflection, quandl, qiskit-aqua, qiskit
+  Found existing installation: marshmallow 2.17.0
+    Uninstalling marshmallow-2.17.0:
+      Successfully uninstalled marshmallow-2.17.0
+  Found existing installation: marshmallow-polyfield 3.2
+    Uninstalling marshmallow-polyfield-3.2:
+      Successfully uninstalled marshmallow-polyfield-3.2
+  Running setup.py install for marshmallow-polyfield: started
+    Running setup.py install for marshmallow-polyfield: finished with status 'done'
+  Found existing installation: qiskit-terra 0.7.1
+    Uninstalling qiskit-terra-0.7.1:
+      Successfully uninstalled qiskit-terra-0.7.1
+  Found existing installation: qiskit-aer 0.1.1
+    Uninstalling qiskit-aer-0.1.1:
+      Successfully uninstalled qiskit-aer-0.1.1
+  Running setup.py install for qiskit-ibmq-provider: started
+    Running setup.py install for qiskit-ibmq-provider: finished with status 'done'
+  Found existing installation: qiskit-ignis 0.1.0
+    Can't uninstall 'qiskit-ignis'. No files were found to uninstall.
+  Running setup.py install for dlx: started
+    Running setup.py install for dlx: finished with status 'done'
+  Running setup.py install for docloud: started
+    Running setup.py install for docloud: finished with status 'done'
+  Running setup.py install for docplex: started
+    Running setup.py install for docplex: finished with status 'done'
+  Running setup.py install for inflection: started
+    Running setup.py install for inflection: finished with status 'done'
+  Found existing installation: qiskit-aqua 0.4.1
+    Can't uninstall 'qiskit-aqua'. No files were found to uninstall.
+  Found existing installation: qiskit 0.8.0
+    Uninstalling qiskit-0.8.0:
+      Successfully uninstalled qiskit-0.8.0
+  Running setup.py install for qiskit: started
+    Running setup.py install for qiskit: finished with status 'done'
+Successfully installed dlx-1.0.4 docloud-1.0.375 docplex-2.10.155 fastdtw-0.3.4 inflection-0.3.1 marshmallow-3.2.1 marshmallow-polyfield-5.7 ndg-httpsclient-0.5.1 nest-asyncio-1.0.0 pyscf-1.6.4 qiskit-0.13.0 qiskit-aer-0.3.2 qiskit-aqua-0.6.1 qiskit-ibmq-provider-0.3.3 qiskit-ignis-0.2.0 qiskit-terra-0.10.0 quandl-3.4.8 websockets-7.0
+qiskit-aqua-chemistry 0.4.0 has requirement qiskit-terra<0.8,>=0.7.0, but you'll have qiskit-terra 0.10.0 which is incompatible.
+
+info - PackageManager: Package [object Object] updated
+info - Object: Go to update qiskit
+verbose - Object: Deactivating Qiskit extension ...
