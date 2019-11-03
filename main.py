@@ -7,7 +7,10 @@ import sys
 import time
 import uuid
 import requests
+import json
 import select
+import datetime
+import subprocess
 from urllib.parse import urlparse
 from io import BytesIO
 from PIL import Image, ImageDraw
@@ -32,8 +35,6 @@ spy_images_processor = SpyImageProcessor()
 
 # video capture from open cv2
 capture = cv2.VideoCapture(0)
-# capture.set(cv2.CAP_PROP_FRAME_WIDTH,640)
-# capture.set(cv2.CAP_PROP_FRAME_HEIGHT,480)
 
 # Set the FACE_SUBSCRIPTION_KEY environment variable with your key as the value.
 # This key will serve all examples in this document.
@@ -51,15 +52,28 @@ print("fps: ", fps)
 face_cascade = cv2.CascadeClassifier(
     "/Users/akash/Desktop/hackio2019/haarcascade_frontalface_default.xml")
 
+path = os.path.join(
+    os.getcwd(),
+    "temp_spy_data/",
+    datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+)
+try:
+    os.mkdir(path)
+except OSError:
+    print("Creation of the directory %s failed" % path)
+else:
+    print("Successfully created the directory %s " % path)
+
 
 def main():
     spy_face_counter = 0
     while(True):
         #  read if any input
-        input = select.select([sys.stdin], [], [], 0)[0]
+        input = select.select([sys.stdin], [], [], 0.5)[0]
         if input:
             line = sys.stdin.readline().rstrip()
             if (line == 'q'):
+                spy_images_processor.save_data()
                 print("terminating the program")
                 break
         else:
@@ -74,19 +88,27 @@ def main():
 
             # Draw a rectangle around every found face
             for (x, y, w, h) in faces:
-                print("area: " + str(w*h))
+                # print("area: " + str(w*h))
                 if (w*h > 15000):
                     spy_face_counter = spy_face_counter + 1
-                    path = './temp_spy_data/spy_face_'+str(spy_face_counter)+'.jpg'
-                    print(path)
-                    spy_images_processor.add_image(cv2.imwrite(path, frame))
+                    img_path = path + '/spy_img_' + \
+                        str(spy_face_counter) + '.jpg'
+                    # print(path)
+                    cv2.imwrite(img_path, frame)
+                    spy_images_processor.add_image_path(img_path)
                     cv2.rectangle(frame, (x, y),
                                   (x+w, y+h), (255, 255, 0), 2)
+                    # subprocess.call(
+                    #     'echo \'tell application "Finder" to sleep\' | osascript', shell=True)
                     break
 
             # Display the resulting frame
-            cv2.imshow('capture frame', frame)
-            cv2.waitKey(5000)
+            # cv2.imshow('capture frame', frame)
+            # cv2.waitKey(5000)
+
+    # output spies captured
+    # for image in spy_images_processor.images:
+    #     print(image)
 
     # When everything done, release the capture
     capture.release()
