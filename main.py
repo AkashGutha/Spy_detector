@@ -14,6 +14,7 @@ import subprocess
 from urllib.parse import urlparse
 from io import BytesIO
 from PIL import Image, ImageDraw
+import pyfiglet
 
 import numpy as np
 import cv2
@@ -57,7 +58,7 @@ def main():
     spy_face_counter = 0
     while(True):
         #  read if any input
-        input = select.select([sys.stdin], [], [], 0.8)[0]
+        input = select.select([sys.stdin], [], [], 0.4)[0]
         if input:
             line = sys.stdin.readline().rstrip()
             if (line == 'q'):
@@ -72,12 +73,12 @@ def main():
             # Look for faces in the image using the loaded cascade file
             faces = face_cascade.detectMultiScale(frame, 1.1, 5)
 
-            print("Found "+str(len(faces))+" face(s)")
+            # print("Found "+str(len(faces))+" face(s)")
 
             # Draw a rectangle around every found face
             for (x, y, w, h) in faces:
                 # print("area: " + str(w*h))
-                if (w*h > 15000):
+                if (w*h > 30000):
                     spy_face_counter = spy_face_counter + 1
                     img_path = path + '/spy_img_' + \
                         str(spy_face_counter) + '.jpg'
@@ -86,10 +87,10 @@ def main():
                     #               (x+w, y+h), (255, 255, 0), 2)
                     cv2.imwrite(img_path, frame)
                     spy_images_processor.add_image_path(img_path)
-                    # subprocess.call(
-                    #     'echo \'tell application "Finder" to sleep\' | osascript', shell=True)
-                    break
-
+                    subprocess.call(
+                        'echo \'tell application "Finder" to sleep\' | osascript', shell=True)
+                    ascii_banner = pyfiglet.figlet_format("Stop Spying ! ! ")
+                    print(ascii_banner)
             # Display the resulting frame
             # cv2.imshow('capture frame', frame)
             # cv2.waitKey(5000)

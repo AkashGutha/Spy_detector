@@ -1,8 +1,9 @@
 
-from azure_face_api import find_similar_faces, detect_face
-from multiprocessing import Process, Queue, Array, Manager, Lock
+from azure_face_api import group_processing, detect_face
+from queue import Queue
 import time
 import os
+import json
 
 
 class Spy():
@@ -17,45 +18,43 @@ class Spy():
 
 
 class SpyImageProcessor():
-    process_manager = Manager()
     image_paths = Queue()
-    face_ids = process_manager.dict()
-    faces = process_manager.dict()
-    spy_groups = process_manager.dict()
-    spy_detetction_threads = []
-    spy_grouping_thread = None
+    face_ids = []
+    faces = []
+    combined_data = {}
 
     def add_image_path(self, image_path):
-        print("new image added")
+        # print("new image added")
         self.image_paths.put(image_path)
-        p = Process(target=spy_detection_pipeline, args=[self.image_paths,
-                                                         self.face_ids, self.faces])
-        p.daemon = True
-        p.start()
-        self.spy_detetction_threads.append(p)
-
-    def create_and_attach_thread(self, images_folder_path):
-        # create and start the process
-
-        p1 = Process(target=spy_grouping_pipeline, args=[
-                     images_folder_path, self.spy_groups])
-        p1.daemon = True
-        p1.start()
-        self.spy_grouping_thread = p1
+        face = detect_face(image_path)
+        # print(face)
+        self.combined_data[face.face_id] = image_path
+        self.face_ids.append(face.face_id)
 
     def save_data(self):
-        print(dict(self.face_ids).keys())
-        for face in self.faces:
-            print(face)
+        group_result = group_processing(self.face_ids)
+        spy_grouped_data = {
+            "groups": group_result.groups,
+            "messy_groups": group_result.messy_group
+        }
+
+        with open('spy_data.json', 'w') as outfile:
+            json.dump(self.combined_data, outfile)
+
+        with open('./ui/src/spy_grouped_data.json', 'w') as outfile:
+            json.dump(spy_grouped_data, outfile)
+
+        with open('./ui/src/spy_data.json', 'w') as outfile:
+            json.dump(self.combined_data, outfile)
+
+        with open('spy_grouped_data.json', 'w') as outfile:
+            json.dump(spy_grouped_data, outfile)
 
     def __init__(self, path):
-        self.create_and_attach_thread(path)
+        self.folder_path = path
 
     def __del__(self):
-        #  save the data and sync the thread
-        self.spy_grouping_thread.join()
-        for thread in self.spy_detetction_threads:
-            thread.join()
+        pass
 
 
 def spy_detection_pipeline(image_paths, face_ids, faces):
@@ -63,9 +62,10 @@ def spy_detection_pipeline(image_paths, face_ids, faces):
     #     if(not image_paths.empty()):
     image_path_to_process = image_paths.get()
     face_id, detected_face = detect_face(image_path_to_process)
-            # face_ids[face_id] = 0
-            # faces[face_id] = detected_face
-    return 
+    # face_ids[face_id] = 0
+    # faces[face_id] = detected_face
+    return
+
 
 def spy_grouping_pipeline(folder_path, faces):
     n_processed_batches = 0
@@ -76,7 +76,7 @@ def spy_grouping_pipeline(folder_path, faces):
         n_images = len(os.listdir(folder_path))
 
         if n_images > n_batch_size * (n_processed_batches + 1):
-            find_similar_faces(folder_path, {})
+            group_processing(folder_path, {})
             n_processed_batches = n_processed_batches + 1
             print("-------------------------------------------")
             print("Faces length : ", len(faces))

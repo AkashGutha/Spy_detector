@@ -32,12 +32,12 @@ def main(image_path):
             recognition_model='recognition_01'
         )
 
-        print(result)
-        print("-------------------------------------------")
-        print("done with file")
-        print("-------------------------------------------")
-        detected_face = result[0]
-        print(detected_face)
+        # print(result)
+        # print("-------------------------------------------")
+        # print("done with file")
+        # print("-------------------------------------------")
+        # detected_face = result[0]
+        # print(detected_face)
         return detected_face.face_id, detected_face
 
 
